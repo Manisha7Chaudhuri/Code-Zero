@@ -1,0 +1,53 @@
+.game-frame {
+  --pink: #ff77c7;
+  --lavender: #c9a3ff;
+  --white: #ffffff;
+
+  width: min(92vw, 720px);
+  aspect-ratio: 1 / 1;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(201,163,255,0.03));
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--white);
+}
+
+.game-frame h1 {
+  font-size: 2.4rem;
+  color: var(--pink);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 6px 18px rgba(199, 120, 170, 0.12);
+}
+
+.game-frame p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
+}
+
+/* decorative */
+.game-frame::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: calc(50% - 360px);
+  top: calc(50% - 360px);
+  background-image: radial-gradient(circle at 30% 30%, #665757 2px, transparent 3px),
+    radial-gradient(circle at 70% 70%, #bc93f6 3px, transparent 4px);
+  opacity: 0.85;
+  transform: rotate(-8deg);
+}
+
+@media (max-width: 480px) {
+  .game-frame {
+    width: 92vw;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
+  }
+}
