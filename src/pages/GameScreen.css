@@ -30,7 +30,6 @@
   color: rgba(255,255,255,0.9);
 }
 
-/* decorative */
 .game-frame::before {
   content: "";
   position: absolute;
